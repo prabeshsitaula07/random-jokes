@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jokes.js"></script>
+    <style>
+        body {
+            background: rgba(120, 192, 226, 0.616);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        h1 {
+            text-decoration: underline;
+        }
+
+        button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 140px;
+            height: 40px;
+            background: #5000ff;
+            border: none;
+            border-radius: 11px;
+            color: #d8ffd3;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        #jokes-container {
+            width: 80vw;
+            margin-top: 20px;
+        }
+
+        .notification {
+            animation: pop-up 0.5s ease-in-out;
+        }
+
+        @keyframes pop-up {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        #jokes-container h2 {
+            padding: 15px;
+            border: 5px solid #5072d7;
+            color: #000;
+            background: #ff000052;
+            border-radius: 18px;
+            box-shadow: 5px 10px 7px 7px #888888;
+            margin: 30px 0
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HEAR SOME JOKES</h1>
+    <button onclick="myFunction()">Get a joke</button>
+    <div id="jokes-container"></div>
+
+
+</body>
+
+</html>
